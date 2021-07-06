@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="style-page-grid.css">
+	<link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet" />
+
+	<title>Style Page Grid</title>
+
+</head>
+<body>
+	<header>
+			<h2>Joe Bloggs</h2>
+			<img src="logo.png" alt="">
+		</header>
+
+		<nav id="nav-labs">
+			<h2>Navigation</h2>
+			<ul>
+				<li><a href="../html5-structural-elements.html">HTML Structural Elements</a>
+				<li><a href="../html5-common-elements.html">HTML Common Elements</a>
+				<li><a href="../html5-validation.html">HTML Validation</a>
+				<li><a href="style-page.html">Style Page</a>
+			</ul>
+		</nav>
+
+		<section id="mark-calculator">
+			<h2>Mark Calculator</h2>
+			<form class="border">
+				<div>
+					<p>Select Completed Exercises</p><br>
+					<input type="checkbox" id="structural-element" name="structural-element" checked="checked">
+					<label for="structural-element">Structural Elements</label><br>
+					<input type="checkbox" id="common-element" name="common-element" checked="checked">
+					<label for="common-element">Common Elements</label><br>
+					<input type="checkbox" id="validation" name="validation" checked="checked">
+					<label for="validation">Validation</label><br>
+					<input type="checkbox" id="style-page" name="style-page" checked="checked">
+					<label for="style-page">Style Pages</label><br>
+
+					<p>Is the code XML well-formed in HTML?</p><br>
+					<input type="radio" id="xml-formed-yes" name="xml-formed" value="Yes" checked="checked">
+					<label for="xml-formed-yes">Yes</label>
+					<input type="radio" id="xml-formed-no" name="xml-formed" value="No">
+					<label for="xml-formed-no">No</label>
+
+					<p>Is the code W3C validated in HTML?</p>
+					<input type="radio" id="w3c-valid-yes" name="w3c-valid" value="Yes">
+					<label for="w3c-valid-yes">Yes</label>
+					<input type="radio" id="w3c-valid-no" name="w3c-valid" value="No" checked="checked">
+					<label for="w3c-valid-no">No</label><br><br>
+
+					<div class="panel">
+						<button id="button-calculate">Calculate</button>
+	                	<label for="calculated-mark">Marks: </label>
+	                	<input type="text" id="calculated-mark" name="calculated-mark" disabled="disabled"><br>
+					</div>
+
+					
+				</div>
+			</form>
+		</section>
+
+		<footer>Joe Bloggs - j.blogs@gmail.com</footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+	font-family: 'Delius', cursive;
+	background-color: #FFFFFF;
+    color: #000000;
+}
+
+header img { 
+   height: 6vh; 
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 0.1vw solid #f7b7b7;
+	font-family: 'Syncopate', sans-serif;
+   
+}
+
+#nav-labs ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border: 0.1vw solid #f7b7b7;
+    border-radius: 0.5vw;
+    list-style-type: none;
+	padding: 1vh 1vw;
+}
+
+#nav-labs ul li a {
+	text-decoration: none;
+}
+
+#mark-calculator {
+	display: block;
+	text-align: center;
+
+}
+
+.border {
+	display: inline-block;
+	text-align: left;
+	border: 0.1vw solid #f7b7b7;
+	border-radius: 5px;
+	padding: 10px;
+
+}
+
+.panel {
+	border: 0.1vw solid #e8e6e6;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    margin: 1vh 0;
+	
+}
+
+footer {
+   margin-top: 10vh;
+   border-top: 0.1vw solid #f7b7b7;
+}

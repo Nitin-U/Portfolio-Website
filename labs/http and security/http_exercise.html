@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<style>
+			h1 {
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			p, li {
+				text-align: justify;
+				font-size: 1.25rem;
+			}
+
+			h3 {
+				font-style: italic;
+				font-size: 1.5rem;
+			}
+
+		</style>
+
+	<title>HTTP and Security</title>
+</head>
+<body>
+
+	<h1>Introduction to HTTP and Security</h1><br><br>
+
+	<h3>1.What is the Hypertext Transfer Protocol (HTTP)?</h3>
+	<p><b>ANS: </b>Hypertext Transfer Protocol (HTTP) is an application-layer protocol used to send hypermedia documents like HTML. It was created to allow web browsers and servers to communicate, but it can also be used for other puropses.</p>
+
+	<p>The first World Wide Web was built using HTTP and HTML to construct the first interactive, text-based web browser. The protocol is still one of the most common ways to access the Internet today.</p>
+
+	<h3>2.Why is HTTP called a stateless protocol?</h3>
+	<p><b>ANS: </b>Because each request is executed independently of the requests that came before it, HTTP is known as a stateless protocol. This implies that once a transaction is completed, the connection between the browser and the server is also terminated. The HTTP server needs not keep track of any state information.</p>
+
+	<h3>3.Describe the three phases of establishing a session using client-server protocols such as HTTP</h3>
+	<p><b>ANS: </b>In client-server protocols, like HTTP, sessions consist of three phases:</p>
+
+	<p>The client establishes a TCP connection: </p> 
+		<ul>
+			<li>The client is the one who establishes the connection in client-server protocols. When you open a connection in HTTP, you're actually starting a connection in the underlying transport layer, which is commonly TCP. Port 80 is the default TCP port for an HTTP server on a computer. Other ports, such as 8000 or 8080, can also be utilized. The domain name and port number are both included in the URL of a page to fetch, though the latter might be omitted if the port is 80.</li>
+		</ul>	
+
+	<p>The client sends its request, and waits for the answer:</p>
+		<ul>
+			<li>The request method is listed first, followed by its parameters: the document's path, which is an absolute URL without the protocol or domain name, and the HTTP protocol version.</li>
+			<li>Following lines represent an HTTP header, which informs the server about what type of data is acceptable (e.g., what language, what MIME types), as well as other data that affects its behavior (e.g., not sending an answer if it is already cached). These HTTP headers are arranged in a block with an empty line at the conclusion.</li>
+			<li>The last block is an optional data block that may contain additional information that is mostly used by the POST method.</li>
+		</ul>
+
+	<p>The server responds to the request by returning an answer with a status code and relevant data:</p>
+		<ul>
+			<li>The status line is made up of an acknowledgement of the HTTP version used, followed by a status request (and its brief meaning in human-readable text).</li>
+			<li>The following lines indicate specific HTTP headers, which provide information to the client about the data transmitted (e.g. type, data size, compression algorithm used, hints about caching). These HTTP headers constitute a block that ends with an empty line, similar to the block of HTTP headers for a client request.</li>
+			<li>The optional data is contained in the final block, which is a data block</li>
+		</ul>	
+
+
+	<h3>4.Describe the parameters on a get and post request.</h3>
+	<p><b>ANS: </b>The data is sent as URL parameters in the GET method, which are typically strings of name and value pairs separated by ampersands (&). A URL with GET data will look something like this:<br><i>http://www.example.com/action.php?name=john&age=24</i></p>
+	<p>In POST method the data is sent to the server as a package in a separate communication with the processing script. Data sent through POST method will not visible in the URL.</p>
+	<p>Both the GET and POST methods are used to transfer data from a client to a server using the HTTP protocol. The main difference between the two methods is that the GET method includes the request parameter in the URL string, whereas the POST method includes the request parameter in the message body, making it a more secure method of transferring data from a client to a server using the HTTP protocol.</p>
+
+	<h3>5.What are the HTTP response status code and What do the HTTP status codes, 200, and 404 indicate?</h3>
+	<p><b>ANS: </b>The HTTP response status codes indicate the successful completion of a specific HTTP request.</p>
+
+	<p>A HTTP status code of 200 indicates success. The client requested server documents. The server answered the client and provided the documents to the client and everything's fine.</p>
+
+	<p>The HTTP 404s indicates, client error codes meaning that there was a problem with the request. Thus, 404 means “The requested resource was not found.” which the most common error message of them all. This code indicates that the requested resource does not exist and that the server has no idea if it ever did.</p>
+
+	<h3>6.What are HTTP cookies? Give an example.</h3>
+	<p><b>ANS: </b>Cookies are little data files that the backend can store in the browsers of users. Cookies are most commonly used for user tracking, personalisation, and, most importantly, authentication.  For example, Users can add things to a shopping cart, then navigate to another page or even another website, and the site will still identify them and the current state of the cart when they return. For the stateless HTTP protocol, it remembers stateful information.</p>
+
+	<h3>7.Why are cookies a security issue?</h3>
+	<p><b>ANS: </b>Cookies aren't hazardous because the data they save doesn't change. Although, they can't utilize viruses or other malware to infect computers, some cyberattacks, can hijack cookies and get access to your browsing activities. Their ability to track people's browsing histories poses a threat.</p>	
+
+	<h3>8.Describe session hijacking and XSS.</h3>
+	<p><b>ANS: </b>Taking control of an active TCP/IP communication session without the user's permission is known as session hijacking. When properly executed, attackers take on the identity of the compromised user and have access to the same resources as the compromised user. Session hijacking has a variety of consequences, including identity theft, information theft, and the theft of sensitive data. There are two types of session hijacking depending on how they are done. If the attacker directly gets involved with the target, it is called active hijacking, and if an attacker just passively monitors the traffic, it is passive hijacking.</p>	
+
+	<p>XSS (cross-site scripting) is a sort of attack in which malicious scripts are injected into websites and online apps with the intent of running on the end user's device. Unsanitized or unvalidated inputs (user-entered data) are utilized to affect outputs during this procedure. Some XSS assaults don't have a specified target; instead, the attacker exploits a vulnerability in the program or site, preying on anyone unfortunate enough to fall victim. However, XSS is frequently used in a more direct manner, such as in an email message. A cross-site scripting (XSS) attack can turn a web application or website into a vector for sending malicious scripts to unsuspecting victims' web browsers.</p>	
+
+	<h3>9.Describe Cross-site request forgery(CSRF).</h3>
+	<p><b>ANS: </b>The CSRF (Cross-Site Request Forgery) attack impersonates a trusted user and sends unauthorized orders to a website. This can be accomplished, for example, by putting malicious parameters in a URL behind a link ostensibly leading somewhere else.</p>	
+
+	<p>If the target is a regular user, a successful CSRF attack can drive them to make state-changing requests, such as transferring funds or altering their email address. CSRF can compromise the entire web application if the victim is an administrative account.</p>
+
+	<h3>10.What are Cross-site HTTP requests (CORS) and what requests use CORS?</h3>
+	<p><b>ANS: </b>CORS is a security method that enables a web page from one domain or Origin to access a resource from another domain or Origin (a cross-domain request). CORS is a loosening of the same-origin policy used by current browsers. The same-origin policy prevents websites from accessing resources from different origins if technologies like CORS aren't available.</p>
+
+	<p>Browsers block cross-origin HTTP queries launched by scripts for security concerns. Secure cross-origin requests and data transfers between browsers and servers are made possible via the CORS mechanism. To limit the hazards of cross-origin HTTP requests, modern browsers use CORS in APIs like XMLHttpRequest and Fetch.</p>
+
+</body>
+</html>

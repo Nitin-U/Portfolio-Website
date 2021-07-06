@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Website</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-----Navigarion Starts----->
+	<nav>
+		<div class="navbar">
+			<div class="logo"><a href="index.html">Port<span>folio</span>_</a></div>
+			<ul class="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="skill.html">Skills</a></li>
+				<li><a href="service.html">Services</a></li>
+				<li><a href="">Contact</a></li>
+				<div class="cancel-btn">
+				<i class="fas fa-times"></i>
+				</div>
+			</ul>
+
+			<div class="menu-btn">
+				<i class="fas fa-bars"></i>
+			</div>
+		</div>
+	</nav>	
+<!-----Navigarion Ends----->
+
+<!-----Contact Starts----->
+  <!--Our Contact Us section starts here-->
+  <div class="big-container">
+    <div class="contact-container">
+    <h3>Click here to contact me!</h3>
+    <a href="#" class="button" id="button">Contact</a>
+  </div>
+
+  <div class="popup">
+    <div class="popup-container">
+      <img src="images/close.png" width="20px" height="20px" alt="Close" class="close">
+      <img src="images/contact.png" alt="User" width="50px" height="50px">
+
+
+      <div id="error-message"></div>
+
+         <form action="" id="myform" onsubmit = "return validate();">
+      <div class="input_field">
+          <input type="text" placeholder="Name" id="name">
+      </div>
+      <div class="input_field">
+          <input type="text" placeholder="Subject" id="subject">
+      </div>
+      <div class="input_field">
+          <input type="text" placeholder="Email" id="email">
+      </div>
+      <div class="input_field">
+          <textarea placeholder="Message" id="message"></textarea>
+      </div>
+      <div class="btn-2">
+          <input type="submit">
+      </div>
+    </form>
+
+
+    </div>  
+  </div>
+  </div>
+
+  <div class="map-container">
+  <h3>WE ARE LOCATED HERE</h3>
+  <p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14128.528962210234!2d85.3112625!3d27.713203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcf014e0d3f728816!2sWelcome%20Nepal%20Treks%20%26%20Tours%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1624978950961!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+  </div>
+<!--Our Contact Us section starts here-->
+<!-----Contact Ends----->
+
+<footer>
+      <div class="main-content">
+        <div class="left box">
+          <h2>Follow Me</h2>
+          <div class="content">
+            <div class="social">
+              <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+              <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="center box">
+          <h2>Address</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">Chitwan, Narayani</span>
+            </div>
+            <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+056-528170</span>
+            </div>
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">nitinutsav80@gmail.com</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="bottom">
+        <center>
+          <span class="credit">Created By <a href="#">Nitin Utsav Bartaula</a> | </span>
+          <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+        </center>
+      </div>
+    </footer>
+
+	<script src="script/script.js"></script>
+  <script src="script/script2.js"></script>
+</body>
+</html>
